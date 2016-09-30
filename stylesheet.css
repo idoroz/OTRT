@@ -2,8 +2,41 @@ body {
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
+      overflow: hidden;
 }
 
+
+
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(img/loading.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
 
 /*-----------------------------------------------------*/
 
@@ -387,14 +420,6 @@ div.diy-slideshow.aboutMe {
     height: 870px;
     z-index: -1;
     text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b30fe2919cb059e810f26902fd469e5d541914a
-
-
->>>>>>> 678740774e370e029b55033172042df4763e2638
 }
 
 div.aboutMeWrapper {
