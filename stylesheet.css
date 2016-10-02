@@ -264,7 +264,7 @@ div.toGallery {
     cursor: pointer;
 }
 
-div.galleryBtn.homeToGallery {
+.galleryBtn.homeToGallery {
     position: absolute;
     color: white;
     font-size: 1em;
