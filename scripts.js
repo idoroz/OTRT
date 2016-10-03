@@ -1,350 +1,371 @@
-
-
-
-
-
-
 $(document).ready(function() {
 
+            if ($(window).width() < 480) {
+
+                $('div#homePageSlide').css('display', 'none');
+                $("div.DJ_Name").css({ 'color': 'black', 'left': '1.8em' });
+                $("div#mobileGalleryBtn").css({
+                        'color': 'black',
+                        'bottom': '-2.4em',
+                        'border': ' 0.3rem solid black',
+                        'border-radius': '25px',
+                        'transform':'scale(0.8)'
+                        });
 
+                $('div.bioTextWrapper').css({
+                            'width': '90%',
+                            'padding-left': '10%',
+                            'padding-right': '10%',
+                            'font-size': '1.1em'
+                        });
+                $('div.menuWrapper').css({
+                            'width': '100%',
+                            'top': '50em',
+                             'left': '0'
 
-    $(window).on('load', function() { // makes sure the whole site is loaded 
-  $('#status').fadeOut(); // will first fade out the loading animation 
-  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-  $('body').delay(350).css({'overflow':'visible'});
-})
+                });
 
+                    }
+                    else {
+                        alert('More than 480');
+                    }
+
+
+
+                    $(window).on('load', function() { // makes sure the whole site is loaded 
+                        $('#status').fadeOut(); // will first fade out the loading animation 
+                        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+                        $('body').delay(350).css({ 'overflow': 'visible' });
+                    })
+
+
+                    setTimeout(function() {
+                        $('.menuWrapper').css('display', 'flex');
+                        $('.bioTextWrapper').css('display', 'block');
+                    }, 400);
+
+                    $('#pic6').on('click', function() {
+                        document.location = '#bio';
+                        return false;
+                    })
+
+                    $('#backToTop').on('click', function() {
+
+                        $.fn.fullpage.moveTo('homePage');
+                        setTimeout(function() { window.location.reload(false); }, 700);
+                    })
+
+                    // $('.card1').hover(function(){
+                    //     $('.card1Cover').show();
+                    //     console.log('in');
+                    // }, function() {
+                    //     $('.card1Cover').hide();
+                    //     console.log('out');
+                    // });
+
+                    // $('button#card1Btn').on('click', function() {
+                    //     console.log('clicked');
+                    //   });
+
+                    var scrollOverflow;
+
+                    if ($(window).width() > 991)
+                        scrollOverflow = true;
+                    else scrollOverflow = false;
+
+                    $('#fullpage').fullpage({
+                        touchSensitivity: (5), //mobile-swipe// 
+                        scrollBar: false,
+                        scrollOverflow: scrollOverflow,
+                        responsiveWidth: 0,
+                        responsiveHeight: 0,
+
+                        verticalCentered: false,
+                        bigSectionsDestination: 'bottom',
+
+                        anchors: ['homePage',
+                            'bio',
+                            'sketchPage1',
+                            'aboutMe',
+                            'galleryPage'
+                        ],
+
+                    });
+                    // $.fn.fullpage.setMouseWheelScrolling(false);
+                    //    $.fn.fullpage.setAllowScrolling(false);
+
+                    // run test on initial page load
+                    checkSize();
+
+                    // run test on resize of the window
+                    $(window).resize(checkSize);
+
+                    console.log(scrollOverflow);
 
-    setTimeout(function() {
-     $('.menuWrapper').css('display', 'flex'); 
-     $('.bioTextWrapper').css('display', 'block');
- }, 400);
-
-    $('#pic6').on('click', function() {
-        document.location = '#bio';
-        return false;
-    })
 
-    $('#backToTop').on('click', function() {
+                    $('.DJ_Name').on('click', function() {
 
-        $.fn.fullpage.moveTo('homePage');
-        setTimeout(function() { window.location.reload(false); }, 700);
-    })
+                        document.location = '#bio';
+                        stopBGSlide(); //stops the slideshow **still need to restart it when u come back to homepage**
+                        return false;
+                    })
 
-    // $('.card1').hover(function(){
-    //     $('.card1Cover').show();
-    //     console.log('in');
-    // }, function() {
-    //     $('.card1Cover').hide();
-    //     console.log('out');
-    // });
 
-    // $('button#card1Btn').on('click', function() {
-    //     console.log('clicked');
-    //   });
-
-    var scrollOverflow;
-
-    if ($(window).width() > 991)
-        scrollOverflow = true;
-    else scrollOverflow = false;
-
-    $('#fullpage').fullpage({
-        touchSensitivity: (5), //mobile-swipe// 
-        scrollBar: false,
-        scrollOverflow: scrollOverflow,
-                responsiveWidth: 0,
-        responsiveHeight: 0,
-
-        verticalCentered: false,
-        bigSectionsDestination: 'bottom',
+                    $('.bioTitle').on('click', function() {
+                        document.location = '#homePage';
+                        return false;
+                    })
 
-        anchors: ['homePage',
-            'bio',
-            'sketchPage1',
-            'aboutMe',
-            'galleryPage'
-        ],
+                    $('.homePageBtn').on('click', function() {
+                        document.location = '#homePage';
+                        return false;
+                    })
 
-    });
-    // $.fn.fullpage.setMouseWheelScrolling(false);
-    //    $.fn.fullpage.setAllowScrolling(false);
 
-    // run test on initial page load
-    checkSize();
 
-    // run test on resize of the window
-    $(window).resize(checkSize);
+                    // init Masonry
+                    // $('.grid').isotope({
+                    //   layoutMode: 'fitRows',
+                    //   // set itemSelector so .grid-sizer is not used in layout
+                    //   itemSelector: '.grid-item',
+                    //   // use element for option
+                    //   columnWidth: '.grid-item',
+                    //   originTop: true,
+                    //   percentPosition: true
+                    // })
+                    $('.grid').isotope({
+                        layoutMode: 'fitRows',
+                        itemSelector: '.grid-item',
+                        percentPosition: true,
+                        masonry: {
+                            // use element for option
+                            columnWidth: '.grid-sizer',
+                            hybrid: true,
+                            fitToSection: false
 
-    console.log(scrollOverflow);
+                        }
+                    });
 
 
-    $('.DJ_Name').on('click', function() {
+                    //lightbox options
+                    lightbox.option({
+                        'resizeDuration': 500,
 
-        document.location = '#bio';
-        stopBGSlide(); //stops the slideshow **still need to restart it when u come back to homepage**
-        return false;
-    })
+                        'albumLabel': ""
+                    })
 
+                    var $lg = $('#lightgallery');
 
-    $('.bioTitle').on('click', function() {
-        document.location = '#homePage';
-        return false;
-    })
+                    $("#lightgallery").lightGallery({
+                        mode: 'lg-fade',
+                        download: false,
+                        selector: 'div.custom-selector',
+                        zoom: true,
+                        scale: 2,
+                        counter: false,
+                        closable: false,
+                        hideBarsDelay: 1200,
+                        resize: false,
+                        actualSize: true,
+                        thumbnail: true,
+                        height: '100%',
+                        width: '100%',
 
-       $('.homePageBtn').on('click', function() {
-        document.location = '#homePage';
-        return false;
-    })
 
+                    });
 
+                    $lg.on('onCloseAfter.lg', function(event) {
+                        document.location = '#homePage';
 
-    // init Masonry
-    // $('.grid').isotope({
-    //   layoutMode: 'fitRows',
-    //   // set itemSelector so .grid-sizer is not used in layout
-    //   itemSelector: '.grid-item',
-    //   // use element for option
-    //   columnWidth: '.grid-item',
-    //   originTop: true,
-    //   percentPosition: true
-    // })
-    $('.grid').isotope({
-        layoutMode: 'fitRows',
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        masonry: {
-            // use element for option
-            columnWidth: '.grid-sizer',
-            hybrid: true,
-            fitToSection: false
+                        setTimeout(function() { window.location.reload(false); }, 700);
+                        return false;
+                    });
 
-        }
-    });
+                    ///run the sketchbook card gallery
+                    runTheCards();
 
 
-    //lightbox options
-    lightbox.option({
-        'resizeDuration': 500,
 
-        'albumLabel': ""
-    })
+                    $('button.toGallery').on('click', function() {
+                        console.log('elleo');
+                        goToGallery();
+                        // return false;
+                    })
 
-    var $lg = $('#lightgallery');
+                    function goToGallery() {
 
-    $("#lightgallery").lightGallery({
-        mode: 'lg-fade',
-        download: false,
-        selector: 'div.custom-selector',
-        zoom: true,
-        scale: 2,
-        counter: false,
-        closable: false,
-        hideBarsDelay: 1200,
-        resize: false,
-        actualSize: true,
-        thumbnail: true,
-        height: '100%',
-        width: '100%',
+                        document.location = '#galleryPage';
+                        $("#firstImgGallery").click();
+                        return false;
 
+                    }
 
-    });
+                });
 
-    $lg.on('onCloseAfter.lg', function(event) {
-        document.location = '#homePage';
 
-        setTimeout(function() { window.location.reload(false); }, 700);
-        return false;
-    });
 
-    ///run the sketchbook card gallery
-    runTheCards();
 
 
+            ////Autoplay on background slideshows
 
-    $('button.toGallery').on('click', function() {
-        console.log('elleo');
-        goToGallery();
-        // return false;
-    })
+            var counter = 0, // to keep track of current slide
+                $items = $('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+                numItems = $items.length; // total number of slides
 
-    function goToGallery() {
+            // this function is what cycles the slides, showing the next or previous slide and hiding all the others
+            var showCurrent = function() {
+                var itemToShow = Math.abs(counter % numItems); // uses remainder (aka modulo) operator to get the actual index of the element to show  
 
-        document.location = '#galleryPage';
-        $("#firstImgGallery").click();
-        return false;
+                $items.removeClass('show'); // remove .show from whichever element currently has it
+                $items.eq(itemToShow).addClass('show');
+            };
 
-    }
 
-});
 
+            ////Autoplay on background slideshow
 
+            var BGSlide = window.setInterval(function() {
 
+                function changeBG() {
+                    console.log("Boom!");
+                    counter++;
+                    showCurrent();
+                }
+                if (counter >= 5) {
+                    counter = 0;
+                }
 
+                changeBG();
+            }, 5000);
 
-////Autoplay on background slideshows
+            ////Autoplay on background slideshow
 
-var counter = 0, // to keep track of current slide
-    $items = $('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
-    numItems = $items.length; // total number of slides
 
-// this function is what cycles the slides, showing the next or previous slide and hiding all the others
-var showCurrent = function() {
-    var itemToShow = Math.abs(counter % numItems); // uses remainder (aka modulo) operator to get the actual index of the element to show  
+            // stop slide function
+            function stopBGSlide() {
+                clearInterval(BGSlide);
+            }
 
-    $items.removeClass('show'); // remove .show from whichever element currently has it
-    $items.eq(itemToShow).addClass('show');
-};
 
 
+            /// wheel down from homepage stops slide show
+            // $(window).bind('mousewheel', function(e){
+            //     if(e.originalEvent.wheelDelta > 0)
+            //     {
+            //         console.log("up");
+            //     }
+            //     else
+            //     {
+            //         console.log("down");
+            //         stopBGSlide();
+            //         console.log(document.location);
+            //     }
 
-////Autoplay on background slideshow
 
-var BGSlide = window.setInterval(function() {
+            //     // if(document.location.hash == "#sketchPage1") {
+            //     // $.fn.fullpage.destroy();
+            //     // }
 
-    function changeBG() {
-        console.log("Boom!");
-        counter++;
-        showCurrent();
-    }
-    if (counter >= 5) {
-        counter = 0;
-    }
+            //     if(document.location.hash == "#galleryPage" ) {
+            //        $( "#firstImgGallery" ).click();
+            //     }
 
-    changeBG();
-}, 5000);
 
-////Autoplay on background slideshow
+            // });
 
+            /// wheel down from homepage stops slide show
 
-// stop slide function
-function stopBGSlide() {
-    clearInterval(BGSlide);
-}
 
 
+            function checkSize() {
+                if ($(".container-fluid").css("padding-left") == "0px") {
+                    // your code here
+                    console.log('ur in mobile version');
+                    $("#pic1").attr("src", "img/mobile/1.jpg");
+                    $("#pic2").attr("src", "img/mobile/2.jpg");
+                    $("#pic3").attr("src", "img/mobile/3.jpg");
+                    $("#pic4").attr("src", "img/mobile/4.jpg");
+                    $("#pic5").attr("src", "img/mobile/5.jpg");
+                    $("#pic6").attr("src", "img/mobile/6.jpg");
+                }
+            }
 
-/// wheel down from homepage stops slide show
-// $(window).bind('mousewheel', function(e){
-//     if(e.originalEvent.wheelDelta > 0)
-//     {
-//         console.log("up");
-//     }
-//     else
-//     {
-//         console.log("down");
-//         stopBGSlide();
-//         console.log(document.location);
-//     }
 
 
-//     // if(document.location.hash == "#sketchPage1") {
-//     // $.fn.fullpage.destroy();
-//     // }
 
-//     if(document.location.hash == "#galleryPage" ) {
-//        $( "#firstImgGallery" ).click();
-//     }
+            //Bio Menu Hover Smoorgasbord
 
+            // $(".galleryBtn").hover(
+            //     function() {
+            //         $(".galleryTitle").removeClass("AnimateOut");
+            //         $("img.galleryImg").removeClass("AnimateOut");
+            //         $(".galleryTitle").addClass("Animate");
+            //         $("img.galleryImg").addClass("Animate");
 
-// });
+            //     },
+            //     function() {
+            //         $(".galleryTitle").addClass("AnimateOut");
+            //         $("img.galleryImg").addClass("AnimateOut");
+            //         $(".galleryTitle").removeClass("Animate");
+            //         $("img.galleryImg").removeClass("Animate");
+            //     });
 
-/// wheel down from homepage stops slide show
+            // $(".sketchBtn").hover(
+            //     function() {
+            //         $(".sketchTitle").removeClass("AnimateOut");
+            //         $("img.sketchImg").removeClass("AnimateOut");
+            //         $(".sketchTitle").addClass("Animate");
+            //         $("img.sketchImg").addClass("Animate");
 
+            //     },
+            //     function() {
+            //         $(".sketchTitle").addClass("AnimateOut");
+            //         $("img.sketchImg").addClass("AnimateOut");
+            //         $(".sketchTitle").removeClass("Animate");
+            //         $("img.sketchImg").removeClass("Animate");
+            //     });
 
+            // $(".websiteBtn").hover(
+            //     function() {
+            //         $(".websiteTitle").removeClass("AnimateOut");
+            //         $("img.websiteImg").removeClass("AnimateOut");
+            //         $(".websiteTitle").addClass("Animate");
+            //         $("img.websiteImg").addClass("Animate");
 
-function checkSize() {
-    if ($(".container-fluid").css("padding-left") == "0px") {
-        // your code here
-        console.log('ur in mobile version');
-        $("#pic1").attr("src", "img/mobile/1.jpg");
-        $("#pic2").attr("src", "img/mobile/2.jpg");
-        $("#pic3").attr("src", "img/mobile/3.jpg");
-        $("#pic4").attr("src", "img/mobile/4.jpg");
-        $("#pic5").attr("src", "img/mobile/5.jpg");
-        $("#pic6").attr("src", "img/mobile/6.jpg");
-    }
-}
+            //     },
+            //     function() {
+            //         $(".websiteTitle").addClass("AnimateOut");
+            //         $("img.websiteImg").addClass("AnimateOut");
+            //         $(".websiteTitle").removeClass("Animate");
+            //         $("img.websiteImg").removeClass("Animate");
+            //     });
 
 
 
 
-//Bio Menu Hover Smoorgasbord
 
-// $(".galleryBtn").hover(
-//     function() {
-//         $(".galleryTitle").removeClass("AnimateOut");
-//         $("img.galleryImg").removeClass("AnimateOut");
-//         $(".galleryTitle").addClass("Animate");
-//         $("img.galleryImg").addClass("Animate");
 
-//     },
-//     function() {
-//         $(".galleryTitle").addClass("AnimateOut");
-//         $("img.galleryImg").addClass("AnimateOut");
-//         $(".galleryTitle").removeClass("Animate");
-//         $("img.galleryImg").removeClass("Animate");
-//     });
+            //Menu Buttons
 
-// $(".sketchBtn").hover(
-//     function() {
-//         $(".sketchTitle").removeClass("AnimateOut");
-//         $("img.sketchImg").removeClass("AnimateOut");
-//         $(".sketchTitle").addClass("Animate");
-//         $("img.sketchImg").addClass("Animate");
+            $('.galleryBtn').on('click', function() {
+                document.location = '#galleryPage';
+                $("#firstImgGallery").click();
+                return false;
+            })
 
-//     },
-//     function() {
-//         $(".sketchTitle").addClass("AnimateOut");
-//         $("img.sketchImg").addClass("AnimateOut");
-//         $(".sketchTitle").removeClass("Animate");
-//         $("img.sketchImg").removeClass("Animate");
-//     });
+            $('.sketchBtn').on('click', function() {
+                document.location = '#sketchPage1';
+                return false;
 
-// $(".websiteBtn").hover(
-//     function() {
-//         $(".websiteTitle").removeClass("AnimateOut");
-//         $("img.websiteImg").removeClass("AnimateOut");
-//         $(".websiteTitle").addClass("Animate");
-//         $("img.websiteImg").addClass("Animate");
 
-//     },
-//     function() {
-//         $(".websiteTitle").addClass("AnimateOut");
-//         $("img.websiteImg").addClass("AnimateOut");
-//         $(".websiteTitle").removeClass("Animate");
-//         $("img.websiteImg").removeClass("Animate");
-//     });
+            })
 
 
 
 
+            $('.websiteBtn').on('click', function() {
+                // window.open('http://www.daniellejacobson.com/', '_blank'); 
+                document.location = '#aboutMe';
+                return false;
 
-
-//Menu Buttons
-
-$('.galleryBtn').on('click', function() {
-    document.location = '#galleryPage';
-    $("#firstImgGallery").click();
-    return false;
-})
-
-$('.sketchBtn').on('click', function() {
-    document.location = '#sketchPage1';
-    return false;
-
-
-})
-
-
-
-
-$('.websiteBtn').on('click', function() {
-    // window.open('http://www.daniellejacobson.com/', '_blank'); 
-    document.location = '#aboutMe';
-    return false;
-
-})
-
-
-
+            })

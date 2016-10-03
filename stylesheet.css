@@ -66,14 +66,14 @@ img#pic6 {
     cursor: pointer;
 }
 
-img .homeSlide {
+/*img .homeSlide {
     width: 90%;
     margin-left: 5%;
     margin-top: 5%;
-    /*centering with spaces on sides*/
+    centering with spaces on sides
     margin-top: -100px;
     height: auto;
-}
+}*/
 
 figure {
     position: absolute;
@@ -493,3 +493,4 @@ div.right h1 {
 img.lg-object.lg-image {
     height: 90% !important;
 }
+
