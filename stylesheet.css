@@ -488,9 +488,14 @@ div.right h1 {
     transform: scale(0.3);
 }
 
-
+/*
 
 img.lg-object.lg-image {
     height: 90% !important;
-}
+}*/
 
+.section1,
+.section1 .fp-slide,
+.section1 .fp-tableCell{
+    height: auto !important;
+}

@@ -1,35 +1,5 @@
 $(document).ready(function() {
 
-            if ($(window).width() < 480) {
-
-                $('div#homePageSlide').css('display', 'none');
-                $("div.DJ_Name").css({ 'color': 'black', 'left': '1.8em' });
-                $("div#mobileGalleryBtn").css({
-                        'color': 'black',
-                        'bottom': '-2.4em',
-                        'border': ' 0.3rem solid black',
-                        'border-radius': '25px',
-                        'transform':'scale(0.8)'
-                        });
-
-                $('div.bioTextWrapper').css({
-                            'width': '90%',
-                            'padding-left': '10%',
-                            'padding-right': '10%',
-                            'font-size': '1.1em'
-                        });
-                $('div.menuWrapper').css({
-                            'width': '100%',
-                            'top': '50em',
-                             'left': '0'
-
-                });
-
-                    }
-                    else {
-                        alert('More than 480');
-                    }
-
 
 
                     $(window).on('load', function() { // makes sure the whole site is loaded 
@@ -161,7 +131,7 @@ $(document).ready(function() {
                         download: false,
                         selector: 'div.custom-selector',
                         zoom: true,
-                        scale: 2,
+                        scale: 1,
                         counter: false,
                         closable: false,
                         hideBarsDelay: 1200,

@@ -2,16 +2,20 @@
 
 .container-fluid {
 	padding-left: 75px;
-    margin-top: 350px;
+
 }
 
+div.diy-slideshow {
 
+    margin-left: -15%;
+    height: 870px;
 
-
+    margin-top: 50%;
+}
 
 div.DJ_Name {
 position: absolute;
-    top: 37em;
+    top: 38em;
     left: 1.8em;
     width: 75%;
     font-family: 'Jura', sans-serif;
@@ -30,9 +34,14 @@ div.DJ_Name span {
 
 
 div.galleryBtn.homeToGallery {
-    bottom: 0em;
+    bottom: 0;
     right: -6em;
-
+    color: black;
+    border-top: 0.3rem solid black;
+    border-left: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    border-right: 0.3rem solid black;
+    border-radius: 25px;
   }
 img.bio_3box{
 
@@ -50,7 +59,7 @@ div.bioTextWrapper {
     text-align: center;
     font-family: 'Jura', sans-serif;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 2.2em;
     color: black;
     position: absolute;
     top: 5%;
@@ -59,15 +68,16 @@ div.bioTextWrapper {
 
 
 
-/*div.menuWrapper {
-     width: 62%;
+div.menuWrapper {
+width: 75%;
     height: 250px;
-    display: flex;
+    display: none;
     justify-content: space-around;
     position: absolute;
-    top: 100em;
-    left: 19%;
-}*/
+    top: 90em;
+    left: 15%;
+    z-index: 9999;
+}
 
 div.box {
   width : 250px;
@@ -88,21 +98,22 @@ div.box img {
 
 div.galleryTitle {
 position: relative;
-    top: -9em;
+    top: 0em;
   font-size: 2em;
 }
 div.sketchTitle {
 position: relative;
-    top: -9em;
+    top: 0em;
   font-size: 2em;
 }
 div.websiteTitle {
 position: relative;
-    top: -9em;
+    top: 0em;
   font-size: 2em;
 }
 
 
-
-
+div.lg-hide-items .lg-toolbar {
+  opacity: 1;
+}
 	}
