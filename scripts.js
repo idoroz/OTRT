@@ -47,10 +47,8 @@ $(document).ready(function() {
                         touchSensitivity: (5), //mobile-swipe// 
                         scrollBar: false,
                         scrollOverflow: scrollOverflow,
-                        responsiveWidth: 0,
-                        responsiveHeight: 0,
+                      fitToSection: true,
 
-                        verticalCentered: false,
                         bigSectionsDestination: 'bottom',
 
                         anchors: ['homePage',
