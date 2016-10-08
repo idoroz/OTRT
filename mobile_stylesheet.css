@@ -60,10 +60,10 @@ div.galleryBtn.homeToGallery {
     padding: 0.5em;
     bottom: 0em;
     left: 27.5em;
-    width: 30%;
+    width: 33%;
     border: 0.2rem solid black;
     border-radius: 25px;
-padding-left: 0.8em;
+padding-left: 1.2em;
     /* transform: scale(0.5); */
 }
 
