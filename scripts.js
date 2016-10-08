@@ -62,9 +62,6 @@ $(document).ready(function() {
     //    $.fn.fullpage.setAllowScrolling(false);
 
     
-            if ($(window).width() < 500) {
-            $.fn.fullpage.setAllowScrolling(false);
-        };
     // run test on initial page load
     checkSize();
 
