@@ -1,9 +1,9 @@
 @media only screen and (max-device-width: 480px) {
 
-.container-fluid {
+/*.container-fluid {
 	padding-left: 75px;
 
-}
+}*/
 
 div.diy-slideshow {
 
@@ -15,8 +15,8 @@ div.diy-slideshow {
 
 div.DJ_Name {
 position: absolute;
-    top: 38em;
-    left: 1.8em;
+    top: 36em;
+    left: 1em;
     width: 75%;
     font-family: 'Jura', sans-serif;
     font-weight: 600;
@@ -115,5 +115,11 @@ position: relative;
 
 div.lg-hide-items .lg-toolbar {
   opacity: 1;
+}
+
+.section1,
+.section1 .fp-slide,
+.section1 .fp-tableCell{
+    height: auto !important;
 }
 	}
