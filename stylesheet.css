@@ -494,8 +494,8 @@ img.lg-object.lg-image {
     height: 90% !important;
 }*/
 
-.section1,
-.section1 .fp-slide,
-.section1 .fp-tableCell{
+.section,
+.section .fp-slide,
+.section .fp-tableCell{
     height: auto !important;
 }
