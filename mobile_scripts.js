@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    var screenHeight = window.screen.height;
+    $('div.section').css('height', screenHeight);
 
 
     $(window).on('load', function() { // makes sure the whole site is loaded 
@@ -43,25 +45,25 @@ $(document).ready(function() {
         scrollOverflow = true;
     else scrollOverflow = false;
 
-    $('#fullpage').fullpage({
-        touchSensitivity: (5), //mobile-swipe// 
-        scrollBar: false,
-        scrollOverflow: scrollOverflow,
-        fitToSection: true,
-        bigSectionsDestination: 'bottom',
+    // $('#fullpage').fullpage({
+    //     touchSensitivity: (5), //mobile-swipe// 
+    //     scrollBar: false,
+    //     scrollOverflow: scrollOverflow,
+    //     fitToSection: true,
+    //     bigSectionsDestination: 'bottom',
 
-        anchors: ['homePage',
-            'bio',
-            'sketchPage1',
-            'aboutMe',
-            'galleryPage'
-        ],
+    //     anchors: ['homePage',
+    //         'bio',
+    //         'sketchPage1',
+    //         'aboutMe',
+    //         'galleryPage'
+    //     ],
 
-    });
+    // });
     // $.fn.fullpage.setMouseWheelScrolling(false);
-    //    $.fn.fullpage.setAllowScrolling(false);
+    // $.fn.fullpage.setAllowScrolling(false);
 
-    
+
 
     // run test on initial page load
     checkSize();
@@ -129,12 +131,12 @@ $(document).ready(function() {
         mode: 'lg-fade',
         download: false,
         selector: 'div.custom-selector',
-        zoom: true,
+        // zoom: true,
         scale: 1,
         counter: false,
         closable: false,
         hideBarsDelay: 1200,
-        resize: false,
+        resize: true,
         actualSize: true,
         thumbnail: true,
         height: '100%',

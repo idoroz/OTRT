@@ -1,35 +1,27 @@
 <!DOCTYPE HTML>
 <html>
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="text/javascript">
-<!--
-if (screen.width <= 699) {
-document.location = "mobile.html";
-}
-//-->
-</script>
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Jura:400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="plugins/fullpage/jquery.fullpage.css">
     <link rel="stylesheet" type="text/css" href="plugins/lightGallery/src/css/lightgallery.css">
     <link rel="stylesheet" type="text/css" href="masonry.css">
     <link rel="stylesheet" type="text/css" href="plugins/unslider/dist/css/unslider.css">
     <link rel="stylesheet" type="text/css" href="plugins/lightbox2/src/css/lightbox.css">
-<!--     <link rel="stylesheet" type="text/css" href="mobile_stylesheet.css"> -->
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <title></title>
+       <link rel="stylesheet" type="text/css" href="masonry_mobile.css">
+	<link rel="stylesheet" type="text/css" href="mobile_stylesheet.css">
+	<title></title>
 </head>
+<body>
 
-<body class = "fp-responsive">
     <div id="preloader">
         <div id="status">&nbsp;</div>
     </div>
     <div id="fullpage">
         <div class="section fp-auto-height" data-anchor="homePage">
             <div class="container-fluid">
-                <div id="homePageSlide" class="diy-slideshow">
+                <div id="homePageSlide" class="diy-slideshow mobileHomePage">
                     <figure class="show">
                         <img id="pic1" class="homeSlide" src="img/desktop/1.jpg" width="100%" />
                     </figure>
@@ -56,15 +48,12 @@ document.location = "mobile.html";
                 <div class="toGallery galleryBtn homeToGallery">View Collection</div>
                 <br>Off The Right Track
             </div>
-             <div id="mobileDJ_Name" class="DJ_Name"><span>Danielle Jacobson</span>
-                <div id="mobileGalleryBtn" class="toGallery galleryBtn homeToGallery">View Collection</div>
-                <br>Off The Right Track
-            </div>
+     
 
         </div>
         <div class="section fp-auto-height" data-anchor="bio">
             <div class="container-fluid">
-                <div class="menuWrapper">
+<!--                 <div class="menuWrapper">
                     <div class="galleryBtn box">
                         <div class="galleryTitle"> <img class="galleryImg" src="img/galleryButton.PNG" /></div>
                     </div>
@@ -74,7 +63,7 @@ document.location = "mobile.html";
                     <div class="websiteBtn box">
                         <div class="websiteTitle"><img class="websiteImg" src="img/aboutMeButton.PNG" /></div>
                     </div>
-                </div>
+                </div> -->
                 <div class="diy-slideshow bio">
                     <div class="bioTextWrapper">
                         <div class="bioTitle">Off The Right Track</div>
@@ -83,7 +72,7 @@ document.location = "mobile.html";
                 </div>
             </div>
         </div>
-        <div class="section fp-auto-height" data-anchor="sketchPage1">
+        <div class="section fp-auto-height sketchPageMobile" data-anchor="sketchPage1">
             <div class="gridWrapper">
                 <div class="grid">
                     <!-- width of .grid-sizer used for columnWidth -->
@@ -183,55 +172,56 @@ document.location = "mobile.html";
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="card9">
-                            <ul>
-                                <li>
-                                    <a class="frontBigImg17" href="" data-lightbox="image-17"><img class="frontThumbImg17" src=""></a>
-                                </li>
-                                <li>
-                                    <a class="frontBigImg18" href="" data-lightbox="image-18"><img class="frontThumbImg18" src=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="card10">
-                            <ul>
-                                <li>
-                                    <a class="frontBigImg19" href="" data-lightbox="image-19"><img class="frontThumbImg19" src=""></a>
-                                </li>
-                                <li>
-                                    <a class="frontBigImg20" href="" data-lightbox="image-20"><img class="frontThumbImg20" src=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="card11">
-                            <ul>
-                                <li>
-                                    <a class="frontBigImg21" href="" data-lightbox="image-21"><img class="frontThumbImg21" src=""></a>
-                                </li>
-                                <li>
-                                    <a class="frontBigImg22" href="" data-lightbox="image-22"><img class="frontThumbImg22" src=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="card12">
-                            <ul>
-                                <li>
-                                    <a class="frontBigImg23" href="" data-lightbox="image-23"><img class="frontThumbImg23" src=""></a>
-                                </li>
-                                <li>
-                                    <a class="frontBigImg24" href="" data-lightbox="image-24"><img class="frontThumbImg24" src=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+              </div>
+<div class="grid-item">
+    <div class="card9">
+        <ul>
+            <li>
+                <a class="frontBigImg17" href="" data-lightbox="image-17"><img class="frontThumbImg17" src=""></a>
+            </li>
+            <li>
+                <a class="frontBigImg18" href="" data-lightbox="image-18"><img class="frontThumbImg18" src=""></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="grid-item">
+    <div class="card10">
+        <ul>
+            <li>
+                <a class="frontBigImg19" href="" data-lightbox="image-19"><img class="frontThumbImg19" src=""></a>
+            </li>
+            <li>
+                <a class="frontBigImg20" href="" data-lightbox="image-20"><img class="frontThumbImg20" src=""></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="grid-item">
+    <div class="card11">
+        <ul>
+            <li>
+                <a class="frontBigImg21" href="" data-lightbox="image-21"><img class="frontThumbImg21" src=""></a>
+            </li>
+            <li>
+                <a class="frontBigImg22" href="" data-lightbox="image-22"><img class="frontThumbImg22" src=""></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="grid-item">
+    <div class="card12">
+        <ul>
+            <li>
+                <a class="frontBigImg23" href="" data-lightbox="image-23"><img class="frontThumbImg23" src=""></a>
+            </li>
+            <li>
+                <a class="frontBigImg24" href="" data-lightbox="image-24"><img class="frontThumbImg24" src=""></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
                 </div>
             </div>
         </div>
@@ -260,12 +250,15 @@ document.location = "mobile.html";
                                 </div>
                                 <div class="toAboutMe" id="backToTop">back to top</div>
                             </div>
+                               </div>
+                                  </div>
+                                     </div>
+                                        </div>
+                                           </div>
+                                              </div>
+                                                 </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="section" data-anchor="galleryPage">
         <div class="container-fluid">
             <div class="diy-slideshow gallery">
@@ -361,10 +354,17 @@ document.location = "mobile.html";
     </div>
     </div>
     </div>
+
+
+
+
+
+
+
     <script src="plugins/jquery-3.1.0.js"></script>
-    <script src="plugins/fullpage/vendors/scrolloverflow.js"></script>
-    <script src="plugins/fullpage/vendors/jquery.easings.min.js"></script>
-    <script src="plugins/fullpage/jquery.fullPage.min.js"></script>
+<!--     // <script src="plugins/fullpage/vendors/scrolloverflow.js"></script>
+    // <script src="plugins/fullpage/vendors/jquery.easings.min.js"></script>
+    // <script src="plugins/fullpage/jquery.fullPage.min.js"></script> -->
     <script src="plugins/lightGallery/src/js/lightgallery.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
     <script src="plugins/lightGallery/src/js/lg-fullscreen.js"></script>
@@ -378,8 +378,15 @@ document.location = "mobile.html";
     <!-- <script src="plugins/slimScroll/jquery.slimscroll.js"></script> -->
     <!-- <script src="plugins/jquery.scrollbar/jquery.scrollbar.js"></script> -->
     <script type="text/javascript" src="sketchbook_scripts.js"></script>
+    <script type="text/javascript" src="mobile_scripts.js"></script>
 
-    <script type="text/javascript" src="scripts.js"></script>
+
+
+
+
+
+
+
+
 </body>
-
 </html>

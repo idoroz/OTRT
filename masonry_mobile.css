@@ -1,0 +1,76 @@
+h1.sketchHeader {
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 2em;
+}
+
+div.gridWrapper {
+    /*  position:absolute;*/
+    height: 2304px;
+    width: 500px;
+}
+
+div.grid {
+    position: absolute;
+    width: 600px;
+    height: 2304px;
+    margin-left: 2.4em;
+}
+
+
+/*For the best layout, margin should be added to .card and padding should be added to .front and .back*/
+
+.card {
+    position: absolute;
+    margin: 0;
+    width: 240px;
+    height: 386px;
+}
+
+
+/* fluid 5 columns */
+
+.grid-sizer,
+.grid-item {
+    width: 240px;
+    /* height: auto;*/
+    height: 384px;
+    /*margin: auto;*/
+}
+
+div.grid-item img {
+    width: 240px;
+    height: 384px;
+    position: relative;
+    z-index: 1
+}
+
+div.toGalleryWrapper {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+div.toGallery {
+    /*    position: absolute;*/
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 5em;
+    cursor: pointer;
+}
+
+.card1Cover {
+    width: 240px;
+    height: 384px;
+    position: absolute;
+    z-index: 100;
+    background: lightblue;
+    display: none;
+}
+
+.card1Btn {
+    position: absolute;
+    z-index: 150;
+}
