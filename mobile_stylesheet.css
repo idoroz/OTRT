@@ -63,6 +63,7 @@ div.galleryBtn.homeToGallery {
     width: 33%;
     border: 0.2rem solid black;
     border-radius: 25px;
+    text-align: center;
     /* transform: scale(0.5); */
 }
 
