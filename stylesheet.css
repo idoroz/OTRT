@@ -57,9 +57,9 @@ body {
     overflow: hidden;
     width: 90%;
     margin-left: 10%;
-    height: 870px;
+    height: 950px;
     z-index: -1;
-    margin-top: 2.3%;
+    margin-top: 1.5%;
 }
 
 img#pic6 {
@@ -145,7 +145,7 @@ div.diy-slideshow.bio {
     overflow: hidden;
     width: 100%;
     margin-left: 0;
-    height: 870px;
+    height: 950px;
     z-index: -1;
 }
 
@@ -417,7 +417,7 @@ div.diy-slideshow.aboutMe {
     overflow: hidden;
     width: 90%;
     margin-left: 5%;
-    height: 870px;
+    height: 950px;
     z-index: -1;
     text-align: center;
 }

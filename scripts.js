@@ -61,30 +61,6 @@ $(document).ready(function() {
     // $.fn.fullpage.setMouseWheelScrolling(false);
     //    $.fn.fullpage.setAllowScrolling(false);
 
-<<<<<<< HEAD
-                    // $('button#card1Btn').on('click', function() {
-                    //     console.log('clicked');
-                    //   });
-
-                    var scrollOverflow;
-
-                    if ($(window).width() > 991)
-                        scrollOverflow = true;
-                    else scrollOverflow = false;
-
-                    $('#fullpage').fullpage({
-                        touchSensitivity: (5), //mobile-swipe// 
-                        scrollBar: false,
-                        scrollOverflow: scrollOverflow,
-                        fitToSection: true,
-                        verticalCentered: false,
-                        bigSectionsDestination: 'bottom',
-                        anchors: ['homePage',
-                            'bio',
-                            'sketchPage1',
-                            'aboutMe',
-                            'galleryPage'
-                        ],
 
     // run test on initial page load
     checkSize();
