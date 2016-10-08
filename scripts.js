@@ -47,16 +47,9 @@ $(document).ready(function() {
                         touchSensitivity: (5), //mobile-swipe// 
                         scrollBar: false,
                         scrollOverflow: scrollOverflow,
-<<<<<<< HEAD
-
                         fitToSection: true,
                         verticalCentered: false,
-=======
-                      fitToSection: true,
-
->>>>>>> cb34a40395a5f5d62e71fd7bc7ff04426b44b4da
                         bigSectionsDestination: 'bottom',
-
                         anchors: ['homePage',
                             'bio',
                             'sketchPage1',
@@ -68,6 +61,11 @@ $(document).ready(function() {
                     // $.fn.fullpage.setMouseWheelScrolling(false);
                     //    $.fn.fullpage.setAllowScrolling(false);
 
+  
+  
+          if ($(window).width() < 500) {
+            $.fn.fullpage.setAllowScrolling(false);
+        };
                     // run test on initial page load
                     checkSize();
 
