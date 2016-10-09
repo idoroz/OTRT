@@ -1,8 +1,9 @@
 
 body {
+        overflow-x: hidden !important;
     overflow: hidden;
-    overflow-x: hidden;
-    width: 100%;
+
+    width: 100% !important;
 }
 
 div.diy-slideshow {
@@ -20,11 +21,12 @@ div.diy-slideshow.mobileHomePage {
 }
 
 figure {
-    position: absolute;
+position: absolute;
     opacity: 0;
     transition: 1s opacity;
-    width: 175%;
-    top: 40%;
+    width: 100%;
+    top: 0%;
+    /* height: 732px; */
     left: 0%;
 }
 
@@ -36,9 +38,9 @@ figure.show {
 
 div.DJ_Name {
     position: absolute;
-    top: 37.5em;
+    top: 24.5em;
     left: 1em;
-    width: 125%;
+    width: 105%;
     font-family: 'Jura', sans-serif;
     font-weight: 600;
     color: black;
@@ -54,13 +56,13 @@ div.DJ_Name span {
 }
 
 div.galleryBtn.homeToGallery {
-      position: absolute;
+position: absolute;
     color: black;
     font-size: 1em;
     padding: 0.5em;
-    bottom: 0em;
-    left: 27.5em;
-    width: 30%;
+    bottom: -4em;
+    left: 6.3em;
+    width: 35%;
     border: 0.2rem solid black;
     border-radius: 25px;
     /* transform: scale(0.5); */
@@ -76,10 +78,10 @@ div.bioTitle {
 }
 
 div.bioTextWrapper {
-    width: 142%;
+    width: 90%;
     height: 870px;
-    margin-top: 42em;
-    left: 2.7em;
+    margin-top: 30em;
+    left: 1em;
     text-align: center;
     font-family: 'Jura', sans-serif;
     font-weight: 400;
@@ -95,7 +97,7 @@ div.diy-slideshow.bio {
     overflow: hidden;
     width: 100%;
     margin-left: 0;
-    height: 870px;
+    height: 770px;
     z-index: -1;
 }
 
@@ -182,8 +184,9 @@ div.left {
 }
 
 div.zanzoImg {
-    height: inherit;
-    margin-top: 51px;
+width: 137px;
+    height: 193px;
+    margin-top: 3em;
 }
 
 img.aboutMeImg {
@@ -195,8 +198,6 @@ img.aboutMeImg {
 div.right {
     position: absolute;
     width: 100%;
-    /* float: right; */
-    left: 9em;
     text-align: center;
     font-family: 'Jura', sans-serif;
     font-weight: 400;
@@ -206,16 +207,17 @@ div.right {
 }
 
 div.aboutMeRightWrapper {
-    /* position: absolute; */
-    width: 93%;
-    margin-top: 32%;
-    margin-left: -15%;
-    /* border-left: 2px solid black; */
-    left: 0;
+position: absolute;
+    width: 100%;
+
+    font-size: 0.8em;
+    font-weight: 400;
 }
 
 div.right h1 {
-    font-size: 2.5em;
+ font-size: 2.1em;
+    font-weight: 600;
+    line-height: 2em;
 }
 
 .socialLinkWrapper {
