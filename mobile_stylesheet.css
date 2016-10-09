@@ -62,7 +62,7 @@ position: absolute;
     padding: 0.5em;
     bottom: -4em;
     left: 6.3em;
-    width: 35%;
+width: 32.3%;
     border: 0.2rem solid black;
     border-radius: 25px;
 padding-left: 1.2em;
@@ -229,6 +229,43 @@ div.right h1 {
 
 .socialLink {
     transform: scale(0.3);
+}
+
+
+
+
+.lg-backdrop {
+    background-color: white;
+}
+
+.lg-toolbar {
+    background-color: white;
+}
+
+.lg-outer .lg-thumb-outer {
+    background-color: white;
+}
+
+.lg-outer .lg-toogle-thumb {
+    background-color: white;
+}
+
+.lg-outer .lg-toogle-thumb:hover {
+    background-color: white;
+}
+
+.lg-outer .lg-toogle-thumb:hover {
+    color: black;
+}
+
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+    background-color: white;
+}
+
+.lg-actions .lg-next:hover,
+.lg-actions .lg-prev:hover {
+    color: black;
 }
 
 .section,
