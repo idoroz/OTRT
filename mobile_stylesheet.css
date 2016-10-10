@@ -49,10 +49,9 @@ div.DJ_Name {
 }
 
 div.DJ_Name span {
-    color: black;
-    font-size: 2em;
-    font-weight: 600;
-    cursor: pointer;
+color: black;
+    font-size: 1.8em;
+    font-weight: 400;
 }
 
 div.galleryBtn.homeToGallery {
@@ -63,7 +62,7 @@ div.galleryBtn.homeToGallery {
     bottom: -4em;
     left: 6.3em;
 
-    width: 43.3%;
+    width: 37.3%;
     border: 0.2rem solid black;
     border-radius: 25px;
     padding-left: 1.7em;
@@ -83,7 +82,7 @@ div.bioTitle {
 div.bioTextWrapper {
     width: 90%;
     height: 870px;
-    margin-top: 30em;
+    margin-top: 35em;
     left: 1em;
     text-align: center;
     font-family: 'Jura', sans-serif;
@@ -91,7 +90,7 @@ div.bioTextWrapper {
     font-size: 1.6em;
     color: black;
     position: absolute;
-    top: 30%;
+    top: 0;
     display: none;
     overflow: hidden;
 }
@@ -100,7 +99,7 @@ div.diy-slideshow.bio {
     overflow: hidden;
     width: 100%;
     margin-left: 0;
-    height: 770px;
+    height: 500px;
     z-index: -1;
 }
 
@@ -161,6 +160,7 @@ div.diy-slideshow.aboutMe {
     height: auto;
     z-index: -1;
     text-align: center;
+    margin-top: 0;
 }
 
 div.aboutMeWrapper {
@@ -187,9 +187,11 @@ div.left {
 }
 
 div.zanzoImg {
-width: 137px;
-    height: 193px;
-    margin-top: 3em;
+
+    position: absolute;
+    margin-top: -3em;
+    left: 50%;
+    transform: scale(0.8);
 }
 
 img.aboutMeImg {
@@ -219,7 +221,7 @@ position: absolute;
 
 div.right h1 {
  font-size: 2.1em;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 2em;
 }
 
@@ -276,5 +278,26 @@ div.right h1 {
 .section .fp-slide,
 .section .fp-tableCell {
     height: auto !important;
+    
+}
+
+#secondGalleryBtn {
+      position: absolute;
+    bottom: -75.5em;
+    /* text-align: center; */
+    left: 9.6em;
+}
+
+#backToTop {
+ position: absolute;
+    color: black;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-top: 63em;
+    left: 9.3em;
+
+    width: 37.3%;
+    border: 0.2rem solid black;
+    border-radius: 25px;
     
 }

@@ -3,6 +3,14 @@ $(document).ready(function() {
     var screenHeight = window.screen.height;
     $('div.section').css('height', screenHeight);
 
+    $('#backToTop').click(function (e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, 1000);
+      return false;
+  
+ 
+});
+
 
     $(window).on('load', function() { // makes sure the whole site is loaded 
         $('#status').fadeOut(); // will first fade out the loading animation 

@@ -30,18 +30,18 @@ $(document).ready(function() {
     //     console.log('clicked');
     //   });
 
-    var scrollOverflow;
+    // var scrollOverflow;
 
-    if ($(window).width() > 991)
-        scrollOverflow = true;
-    else scrollOverflow = false;
+    // if ($(window).width() > 991)
+    //     scrollOverflow = true;
+    // else scrollOverflow = false;
 
     $('#fullpage').fullpage({
         touchSensitivity: (5), //mobile-swipe// 
         scrollBar: false,
-        scrollOverflow: scrollOverflow,
-        fitToSection: true,
-        bigSectionsDestination: 'bottom',
+        scrollOverflow: false,
+        fitToSection: false,
+    
 
         anchors: ['homePage',
             'bio',
@@ -62,7 +62,7 @@ $(document).ready(function() {
     // run test on resize of the window
     $(window).resize(checkSize);
 
-    console.log(scrollOverflow);
+    // console.log(scrollOverflow);
 
 
     $('.DJ_Name').on('click', function() {

@@ -1,5 +1,5 @@
 body {
-    position: relative;
+/*    position: relative;*/
     overflow-x: hidden;
     overflow-y: hidden;
       overflow: hidden;
@@ -44,12 +44,13 @@ img#pic6 {
 }*/
 
 figure {
-position: absolute;
+    position: absolute;
     opacity: 0;
     transition: 1s opacity;
-    width: 90%;
-    margin-left: 4.5%;
-    transform: scale(1);
+    width: 100%;
+    margin-left: 0;
+    top: -5.5em;
+    transform: scale(0.8);
 
 
 }
@@ -145,7 +146,7 @@ img.bio_3box {
     font-size: 1.7em;
     color: black;
     position: absolute;
-    top: 5%;
+    top: 6%;
     display: none;
 }
 
@@ -180,7 +181,7 @@ div.bioDescription {
     display: none;
     justify-content: space-around;
     position: absolute;
-    top: 42em;
+    top: 45em;
     left: 25.6%;
     z-index: 9999;
 }
@@ -241,14 +242,14 @@ div.toGallery {
     position: absolute;
     color: white;
     font-size: 1em;
-    bottom: -4em;
+    bottom: -2em;
     right: 0;
     border: 0.3rem solid white;
     border-radius: 25px;
 }
 
 div.toGallery:hover {
-    background: url('img/mobile/1.jpg') 0 0 no-repeat;
+    background: url('img/btnBackground.png') 0 0 no-repeat;
     border-top: 0.3rem solid black;
     border-left: 0.3rem solid black;
     border-bottom: 0.3rem solid black;
@@ -417,7 +418,7 @@ div.left {
 
 div.zanzoImg {
     height: inherit;
-    margin-top: 51px;
+    margin-top: 16em;
 }
 
 img.aboutMeImg {
@@ -469,8 +470,8 @@ img.lg-object.lg-image {
     height: 90% !important;
 }*/
 
-/*.section,
+.section,
 .section .fp-slide,
 .section .fp-tableCell{
     height: auto !important;
-}*/
+}

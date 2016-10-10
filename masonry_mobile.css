@@ -8,12 +8,12 @@ h1.sketchHeader {
 div.gridWrapper {
     /*  position:absolute;*/
     height: 800px;
-    width: 412px;
+    width: 100%;
 }
 
 div.grid {
     position: absolute;
-    width: 412px;
+    width: 100%;
     height: 800px;
    
 }
