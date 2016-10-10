@@ -9,36 +9,6 @@ body {
 
 
 
-/* Preloader */
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  /* change if the mask should have another color then white */
-  z-index: 99;
-  /* makes sure it stays on top */
-}
-
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  /* centers the loading animation horizontally one the screen */
-  top: 50%;
-  /* centers the loading animation vertically one the screen */
-  background-image: url(img/loading.gif);
-  /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px;
-  /* is width and height divided by two */
-}
-
 /*-----------------------------------------------------*/
 
 
@@ -54,13 +24,10 @@ body {
 /*-----------------------------------------------------*/
 
 .diy-slideshow {
-    /*   display: block; */
-    overflow: hidden;
-    width: 90%;
-    margin-left: 10%;
-    height: 950px;
+       overflow: hidden;
+    height: 870px;
     z-index: -1;
-    margin-top: 1.5%;
+    
 }
 
 img#pic6 {
@@ -77,9 +44,14 @@ img#pic6 {
 }*/
 
 figure {
-    position: absolute;
+position: absolute;
     opacity: 0;
     transition: 1s opacity;
+    width: 90%;
+    margin-left: 4.5%;
+    transform: scale(1);
+
+
 }
 
 figure.show {
@@ -483,10 +455,12 @@ div.right h1 {
     width: 100%;
     display: flex;
     justify-content: center;
+    transform: scale(0.3);
+    padding-right: 2em;
 }
 
 .socialLink {
-    transform: scale(0.3);
+    padding-left: 2em;
 }
 
 /*
@@ -495,8 +469,8 @@ img.lg-object.lg-image {
     height: 90% !important;
 }*/
 
-.section,
+/*.section,
 .section .fp-slide,
 .section .fp-tableCell{
     height: auto !important;
-}
+}*/
